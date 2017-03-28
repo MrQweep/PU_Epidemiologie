@@ -1,7 +1,15 @@
 import matplotlib.pyplot as plt
 
 class SIR:
-    def __init__(self,max_time=int(input("Time: ")), dt = int(input("Timestep: ")),s=float(input("Susceptible: ")),i=float(input("Infected: ")),r=float(input("Recovered: ")),beta=float(input("Beta: ")),gamma=float(input("Gamma: "))):
+    def __init__(self,max_time=None, dt=None,s=None,i=None,r=None,beta=None,gamma=None):
+        if max_time == None:
+            max_time=int(input("Time: "))
+            dt = int(input("Timestep: "))
+            s=float(input("Susceptible: "))
+            i=float(input("Infected: "))
+            r=float(input("Recovered: "))
+            beta=float(input("Beta: "))
+            gamma=float(input("Gamma: "))
         self.max_time = max_time
         self.dt = dt
         self.s=s
