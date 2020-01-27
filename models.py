@@ -34,6 +34,8 @@ class SIR:
         plt.plot(self.t_record, self.i_record, 'r')
         plt.plot(self.t_record, self.r_record, 'b')
         plt.show()
+        plt.savefig('graph.png')
+
 
     def timestep(self,dt):
         ds = -(self.beta * self.i * self.s)
